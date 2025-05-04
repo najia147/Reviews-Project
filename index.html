@@ -4,19 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reveiws</title>
-    <link href="./styles.css" />
+    <link href="./src/output.css" rel="stylesheet" />
   </head>
-  <body>
-    <div class="container">
-      <h1>Our Reviews</h1>
-      <div>
-        <img id="image" src="" alt="" width="200px" height="200px" />
-        <h1 id="name"></h1>
-        <h2 id="job"></h2>
-        <p id="description"></p>
-        <button id="prev"><img src="./images/left-arrow.png" /></button>
-        <button id="next"><img src="./images/right-arrow.png" /></button>
-        <button id="random">Surprise me</button>
+  <body
+    class="min-h-screen flex flex-col items-center justify-center dark:bg-gray-900 space-y-6 p-4"
+  >
+    <!-- Heading outside of the card -->
+    <h1 class="text-4xl font-bold">Our Reviews</h1>
+
+    <!-- The main card -->
+    <div
+      class="font-serif w-full max-w-md sm:max-w-lg md:max-w-xl rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
+    >
+      <div class="flex flex-col items-center space-y-4">
+        <img
+          id="image"
+          src=""
+          alt="User image"
+          class="w-20 h-20 rounded-full object-cover"
+        />
+        <h1
+          id="name"
+          class="text-xl font-bold text-gray-800 dark:text-white"
+        ></h1>
+        <h2 id="job" class="text-sm text-gray-500 dark:text-gray-300"></h2>
+        <p
+          id="description"
+          class="text-center text-gray-700 dark:text-gray-200 px-4"
+        ></p>
+
+        <div class="flex space-x-4">
+          <button id="prev">
+            <img src="./images/left-arrow.png" class="w-10 h-10" />
+          </button>
+          <button id="next">
+            <img src="./images/right-arrow.png" class="w-10 h-10" />
+          </button>
+        </div>
+
+        <button
+          id="random"
+          class="px-6 py-2 rounded-2xl bg-gray-900 text-white shadow-lg hover:bg-slate-800 dark:bg-slate-700"
+        >
+          Surprise me
+        </button>
       </div>
     </div>
 
