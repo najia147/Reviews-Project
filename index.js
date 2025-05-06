@@ -1,17 +1,17 @@
 let data = [
   {
     id: 1,
-    imgSrc: "./images/2.JPG",
-    name: "Nahid",
-    job: "Instructor",
-    description: `Nahid is a passionate instructor who brings energy and clarity to every lesson. She’s dedicated to making complex topics easy to understand for all students.`,
-  },
-  {
-    id: 2,
     imgSrc: "./images/1.JPG",
     name: "Najia",
     job: "Web Developer",
     description: `Najia is a passionate web developer who enjoys learning and building with Shopify. She’s constantly exploring new ways to improve her skills and create seamless e-commerce experiences.`,
+  },
+  {
+    id: 2,
+    imgSrc: "./images/2.JPG",
+    name: "Nahid",
+    job: "Instructor",
+    description: `Nahid is a passionate instructor who brings energy and clarity to every lesson. She’s dedicated to making complex topics easy to understand for all students.`,
   },
   {
     id: 4,
@@ -64,5 +64,15 @@ prevButton.addEventListener("click", function () {
   if (currentItem < 0) {
     currentItem = data.length - 1;
   }
+  showPerson(currentItem);
+});
+
+function getRandomElement() {
+  return Math.floor(Math.random() * data.length);
+}
+
+randomButton.addEventListener("click", function () {
+  let randomElement = getRandomElement();
+  currentItem = randomElement;
   showPerson(currentItem);
 });
